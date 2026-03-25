@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>EasyGym</title>
+        <link rel="icon" href="" id="favicon">
+        <link rel="stylesheet" href="../static/css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      </head>
+
+      <body>
+        <header>
+          <div>
+            <h1>Easy Gym</h1>
+            <h4>Olá usuario</h4>
+          </div>
+        </header>
+
+        <main>
+          <!-- Home -->
+          <section class="introducao">
+            <h1>Bem-vindo!</h1>
+            <p>Organize sua rotina de treino conosco</p>
+          </section>
+          
+          <section class="frequencia"> 
+            <h1>Frequencia de treino</h1>
+            <div id="frequencia" class="calendar"></div>
+          </section> 
+
+          <section class="presenca">
+            <h1 class="hora"></h1>
+            <button>Marcar presença</button>
+          </section>
+
+          <section class="treinoModal">
+            <div class="text1">
+              <h1>Treino</h1>
+              <p>Alterar Treinos</p>
+            </div>
+            <div class="exercicios">
+              <p>cruxifixo 2x5<br>Triceps 4x12<br>ombro 4x5</p>
+            </div>
+          </section>
+
+          <!-- Modal Adicionar treinos -->
+          <section class="modalTreinos" id="modalTreinos" style="display: none;">
+            <div class="adicionarTreino">
+              <p id="abrirForm" role="button" tabindex="0">+</p>
+              <form id="formTreino" style="display: none;">
+                <input id="nomeTreino" type="text" name="nomeTreino" placeholder="Nome do treino" required>
+                <div id="listaExercicios">
+                  <div class="linha-exercicio">      
+                    <input type="text" name="exercicio[]" placeholder="Exercício" required>
+                    <input id="smallInput" type="number" name="series[]" placeholder="Séries" required>
+                    <input id="smallInput" type="number" name="reps[]" placeholder="Reps" required>
+                  </div>
+                </div>
+              
+                <button type="button" id="addExercicio">+ Adicionar exercício</button>
+              
+                <div class="formButtons">
+                  <img id="cancelar" src='../static/images/trash_icon.svg' alt='Cancelar' type="button">
+                  <img id="salvarTreino" src="../static/images/disk_icon.svg" alt="Salvar treino" type="submit">
+                </div>
+              
+              </form>
+            </div>
+          </section>        
+        </main>
+
+
+
+        <!-- MENU CLICAVEL -->
+        <footer> 
+          <div id="inicioBotao" class="inicio" role="button" tabindex="0"></div>
+          <div id="treinoBotao" class="treino" role="button" tabindex="0"></div>
+          <div class="historico"></div>
+          <div class="conta"></div>
+        </footer>
+
+          <script src="../static/js/calendar.js"></script>
+          <script src="../static/js/hora.js"></script>
+          <script src="../static/js/modalMenu.js"></script>
+          <script src="../static/js/form.js"></script>
+      </body>
+
+</html>

@@ -1,0 +1,392 @@
+/* Reset padrão */ 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  outline: none;
+}
+
+html, body {
+  height: 100dvh; 
+  width: 100%;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex; 
+  flex-direction: column;
+  overflow-x: hidden;
+  min-height: 100dvh; 
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 8dvh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+  0 2px 4px rgba(0, 0, 0, 0.06);
+  z-index: 99999;
+  padding: 2dvh;
+}
+
+header h1{
+  color: #2686cf;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+header h4{
+  color:#58a7e5;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+main {
+  background-color: rgb(248, 248, 248);
+  width: 100%;
+  height: 80dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:2dvh;
+}
+
+/* Texto inicial */
+.introducao {
+  width: 100%;
+  padding: 2dvh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5dvh;
+  gap: 1.8dvh;
+  background-color: rgb(248, 248, 248);
+}.introducao h1 {
+  color: rgb(60, 60, 60);
+  font-size: 1.2rem;
+  font-weight: 900;
+}.introdução p {
+  color: rgb(60, 60, 60);
+  font-size: 0.7rem;
+}
+/* Texto inicial */
+
+
+
+
+/* Calendario */
+.frequencia {
+  background-color:rgb(255, 255, 255);
+  width: 92%;
+  height: 14dvh;
+  max-height: 13dvh;
+  border-radius:10px ;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+  0 2px 4px rgba(0, 0, 0, 0.06);
+}.frequencia h1 {
+  padding: 1.5dvh;
+  color: rgb(60, 60, 60);
+  font-weight: 900;
+  font-size: 1rem;
+}.calendar {
+width: 100%;
+min-height: 5dvh;
+max-height: 5dvh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* Calendario */
+
+
+
+
+/* Presença */
+.presenca {
+  background-color:rgb(255, 255, 255);
+  width: 92%;
+  height: 13dvh;
+  border-radius:10px ;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+  0 2px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content:center ;
+  align-items: center;  
+} .presenca h1 {
+  padding: 1.5dvh;
+  color: rgb(60, 60, 60);
+  font-weight: bold;
+  font-size: 1.1rem;
+} .presenca button {
+  background-color: #3588d4;
+  color: white;
+  padding: 0.8vh 1.5vh;
+  border-radius: 4px;
+}
+/* Presença */
+
+
+/* Treino */
+.treinoModal{
+  background-color:rgb(255, 255, 255);
+  min-width: 92%;
+  min-height: 10dvh;
+  max-height: 35dvh;
+  border-radius:10px ;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+  0 2px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+} .treinoModal h1 {
+  color: rgb(60, 60, 60);
+  font-weight: bold;
+  font-size: 1rem;
+} .treinoModal p {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #3588d4;;
+}
+
+.text1 {
+  padding: 1.5dvh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 3dvh;
+  align-items: center;
+}
+
+.exercicios {
+  padding: 2dvh;
+}.exercicios p{
+  font-weight: 500;
+  color: rgb(60, 60, 60);
+}
+/* Treino */
+
+
+/* Modal para adicionar treino */
+.modalTreinos{
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  height: 76dvh;
+  background-color: rgb(248, 248, 248);
+  flex-direction: column;;
+  align-items: center;  
+  scroll-behavior: smooth;  /* Torna o scroll mais suave */
+  overflow-y: auto;  /* Adiciona scroll vertical quando necessário */
+  max-height: 80vh; 
+  gap: 2dvh;
+  padding: 2dvh;
+}
+
+.adicionarTreino{
+  background-color:rgb(255, 255, 255);
+  width: 92%;
+  border-radius:10px ;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+  0 2px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}.adicionarTreino p {
+  font-size: 4rem;
+  color: #bababa;
+}
+
+.linha-exercicio {
+  gap: 5px;
+  margin-bottom: 8px;
+  width: 100%;
+  display: flex;
+}.linha-exercicio input {
+  width: 11dvh;
+  border: 1px solid #ccc;
+  padding: 1px 2px;
+  border-radius: 6px;
+}#formTreino {
+  padding: 2dvh;
+  width: 100%;
+}#smallInput {
+  width: 7dvh;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#btnMusculo {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-height: 60dvh;
+  overflow-y: auto;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 180px;
+}
+
+.dropdown-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  border-bottom: #c4c4c4 1px solid;
+}
+
+.dropdown-item:hover {
+  background: #f0f4ff;
+}
+
+.dropdown-exercicios{
+  width: 48dvh;
+  height: auto;
+}.dropdown-exercicios img{
+  width: 13dvh;
+  height: auto;
+}
+
+#nomeTreino{
+  margin-bottom: 2dvh;
+  border-bottom: #2686cf 2px solid;
+}
+
+#listaExercicios {
+  width: 100%;
+}
+
+#addExercicio{
+  margin-bottom: 4dvh;
+}
+
+
+.formButtons {
+display: flex;
+justify-content: center;
+gap:4dvh;
+} .formButtons img {
+  width: 3dvh;
+  filter: contrast(0.4);
+}
+
+/* Modal para adicionar treino */
+
+
+/* Lista treinos */
+
+.treino-card {
+  background-color:rgb(255, 255, 255);
+  width: 92%;
+  height: auto;
+  max-height: 90dvh;
+  border-radius:10px ;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+  0 2px 4px rgba(0, 0, 0, 0.06);
+  border: 1px solid #3498db;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: bold;
+  color: #2c3e50;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+}
+
+.exercicios-card {
+  border-top: 2px solid #3498db;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Lista treinos */
+
+
+/* Footer */
+footer {
+  background-color: #3588d4;
+  width: 100%;
+  height: 8dvh;
+  display: flex;
+  z-index: 99999;
+}
+
+.inicio, .treino, .historico, .conta {
+  background-repeat: no-repeat;
+  background-position: center center;  
+  width: 25%;
+  height: 100%;
+}
+
+#inicioBotao {
+  background-color: #41a1eb;
+}
+
+.inicio {
+  background-image: url("../images/home.png");
+  background-size: 30% auto;
+}
+.treino {
+  background-image: url("../images/gymWeight.png");
+  background-size: 32% auto;
+}
+.historico {
+  background-image: url("../images/log.png");
+  background-size: 30% auto;
+}
+.conta {
+  background-image: url("../images/account.png");
+  background-size: 30% auto;
+}
+
+.inicio:hover, .treino:hover, .historico:hover, .conta:hover{
+  background-color: #41a1eb;
+}
+
+/* Footer */
